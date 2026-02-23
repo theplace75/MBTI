@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Primary Meta Tags -->
-  <meta name="title" content="MBTI - Byungkwan Chae, Youngjae Choi, Heewon Kim">
+  <meta name="title" content="MBTI: Metric-Based Textual Inversion for Fine-Grained Image Classification - Byungkwan Chae, Youngjae Choi, Heewon Kim">
   <meta name="description" content="MBTI is a plug-and-play enhancement that promotes cross-class separation of class embeddings to preserve fine-grained details.">
   <meta name="keywords" content="diffusion models, personalization, fine-grained, few-shot, metric learning, text embeddings, MBTI, computer vision">
   <meta name="author" content="Byungkwan Chae, Youngjae Choi, Heewon Kim">
@@ -15,7 +15,7 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Soongsil University">
-  <meta property="og:title" content="MBTI">
+  <meta property="og:title" content="MBTI: Metric-Based Textual Inversion for Fine-Grained Image Classification">
   <meta property="og:description" content="MBTI is a plug-and-play enhancement that promotes cross-class separation of class embeddings to preserve fine-grained details.">
   <meta property="og:url" content="https://theplace75.github.io/MBTI/">
   <meta property="og:image" content="https://theplace75.github.io/MBTI/static/images/social_preview.png">
@@ -25,19 +25,32 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="MBTI">
+  <meta name="twitter:title" content="MBTI: Metric-Based Textual Inversion for Fine-Grained Image Classification">
   <meta name="twitter:description" content="MBTI is a plug-and-play enhancement that promotes cross-class separation of class embeddings to preserve fine-grained details.">
   <meta name="twitter:image" content="https://theplace75.github.io/MBTI/static/images/social_preview.png">
   <meta name="twitter:image:alt" content="MBTI - Research Preview">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="MBTI">
+  <meta name="citation_title" content="MBTI: Metric-Based Textual Inversion for Fine-Grained Image Classification">
   <meta name="citation_author" content="Chae, Byungkwan">
   <meta name="citation_author" content="Choi, Youngjae">
   <meta name="citation_author" content="Kim, Heewon">
   <meta name="citation_publication_date" content="2026">
   <meta name="citation_conference_title" content="WACV 2026">
   <meta name="citation_pdf_url" content="https://theplace75.github.io/MBTI/static/pdfs/paper.pdf">
+
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
   <title>MBTI | WACV 2026</title>
 
@@ -55,6 +68,7 @@
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
+  <!-- Fallback for browsers that don't support preload -->
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="static/css/bulma-slider.min.css">
@@ -62,6 +76,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
 
+  <!-- Fonts - Optimized loading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Defer non-critical JavaScript -->
@@ -80,9 +95,34 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <main id="main-content">
+  <!-- More Works Dropdown (optional: keep or remove) -->
+  <div class="more-works-container">
+    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
+      <i class="fas fa-flask"></i>
+      More Works
+      <i class="fas fa-chevron-down dropdown-arrow"></i>
+    </button>
+    <div class="more-works-dropdown" id="moreWorksDropdown">
+      <div class="dropdown-header">
+        <h4>More Works</h4>
+        <button class="close-btn" onclick="toggleMoreWorks()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="works-list">
+        <a href="https://github.com/theplace75" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>GitHub</h5>
+            <p>More projects and code.</p>
+            <span class="work-venue">theplace75</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 
-  <!-- HERO -->
+  <main id="main-content">
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -115,19 +155,36 @@
             <div class="column has-text-centered">
               <div class="publication-links">
 
+                <!-- Paper -->
                 <span class="link-block">
                   <a href="static/pdfs/paper.pdf" target="_blank"
                      class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
                     <span>Paper</span>
                   </a>
                 </span>
 
+                <!-- Code -->
                 <span class="link-block">
                   <a href="https://github.com/theplace75/MBTI" target="_blank"
                      class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
                     <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- Poster (optional) -->
+                <span class="link-block">
+                  <a href="static/pdfs/poster.pdf" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-image"></i>
+                    </span>
+                    <span>Poster</span>
                   </a>
                 </span>
 
@@ -172,7 +229,7 @@
   </section>
   <!-- End paper abstract -->
 
-  <!-- Image carousel (kept as-is; you can remove if not needed) -->
+  <!-- Image carousel (optional: keep or edit) -->
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
@@ -199,7 +256,7 @@
   </section>
   <!-- End image carousel -->
 
-  <!-- Youtube video (kept; remove if not needed) -->
+  <!-- Youtube video (optional: remove if not needed) -->
   <section class="hero is-small is-light">
     <div class="hero-body">
       <div class="container">
@@ -207,8 +264,7 @@
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
             <div class="publication-video">
-              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0"
-                      allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
           </div>
         </div>
@@ -217,7 +273,7 @@
   </section>
   <!-- End youtube video -->
 
-  <!-- Experimental Results Table (replaces "Another Carousel" video carousel) -->
+  <!-- Experimental Results Table (replaces "Another Carousel") -->
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
@@ -273,11 +329,7 @@
         <div class="column is-8">
           <div class="content">
             <p>
-              This page was built using the
-              <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">
-                Academic Project Page Template
-              </a>
-              adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
             </p>
           </div>
         </div>
