@@ -1,35 +1,290 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="MBTI - Byungkwan Chae, Youngjae Choi, Heewon Kim">
+  <meta name="description" content="MBTI is a plug-and-play enhancement that promotes cross-class separation of class embeddings to preserve fine-grained details.">
+  <meta name="keywords" content="diffusion models, personalization, fine-grained, few-shot, metric learning, text embeddings, MBTI, computer vision">
+  <meta name="author" content="Byungkwan Chae, Youngjae Choi, Heewon Kim">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Soongsil University">
+  <meta property="og:title" content="MBTI">
+  <meta property="og:description" content="MBTI is a plug-and-play enhancement that promotes cross-class separation of class embeddings to preserve fine-grained details.">
+  <meta property="og:url" content="https://theplace75.github.io/MBTI/">
+  <meta property="og:image" content="https://theplace75.github.io/MBTI/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MBTI - Research Preview">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MBTI">
+  <meta name="twitter:description" content="MBTI is a plug-and-play enhancement that promotes cross-class separation of class embeddings to preserve fine-grained details.">
+  <meta name="twitter:image" content="https://theplace75.github.io/MBTI/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="MBTI - Research Preview">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="MBTI">
+  <meta name="citation_author" content="Chae, Byungkwan">
+  <meta name="citation_author" content="Choi, Youngjae">
+  <meta name="citation_author" content="Kim, Heewon">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="WACV 2026">
+  <meta name="citation_pdf_url" content="https://theplace75.github.io/MBTI/static/pdfs/paper.pdf">
+
   <title>MBTI | WACV 2026</title>
-  <style>
-    body{font-family:Arial,Helvetica,sans-serif; margin:40px; line-height:1.5;}
-    h1{margin:0 0 6px 0;}
-    .meta{margin:0 0 16px 0; font-size:16px;}
-    .authors{margin:0 0 6px 0; font-size:16px;}
-    h2{margin:18px 0 6px 0; font-size:18px;}
-    p{margin:0;}
-  </style>
+
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
 </head>
+
 <body>
-  <h1>MBTI</h1>
 
-  <div class="authors"><b>Byungkwan Chae</b> (first author), Youngjae Choi*, Heewon Kim†</div>
-  <div class="meta">Soongsil University, Seoul, Republic of Korea</div>
-  <div class="meta"><b>WACV 2026</b></div>
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 
-  <h2>Abstract</h2>
-  <p>MBTI improves fine-grained diffusion personalization by promoting cross-class separation in the text-embedding space.</p>
+  <main id="main-content">
 
-  <h2>Method</h2>
-  <p>SES selects confusing neighbors; DMM maximizes diffusion-based distance; the objective balances separation and fidelity.</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
 
-  <h2>Qualitative Results</h2>
-  <p>MBTI preserves fine-grained details where baselines/SoTA methods often blur or distort them.</p>
+            <h1 class="title is-1 publication-title">
+              MBTI: Metric-Based Textual Inversion<br>
+              for Fine-Grained Image Classification
+            </h1>
 
-  <h2>Quantitative Results</h2>
-  <p>MBTI boosts few-shot Macro-ACC and improves FID/CLIP as a plug-and-play add-on to LoRA and DreamBooth+LoRA.</p>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://github.com/theplace75" target="_blank"><b>Byungkwan Chae</b></a>,</span>
+              <span class="author-block">
+                <a href="#" target="_blank">Youngjae Choi</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="#" target="_blank">Heewon Kim</a><sup>†</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Soongsil University, Seoul, Republic of Korea<br>
+                <b>WACV 2026</b>
+              </span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Co-author &nbsp;&nbsp; <sup>†</sup>Corresponding author</small></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+
+                <span class="link-block">
+                  <a href="static/pdfs/paper.pdf" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://github.com/theplace75/MBTI" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser image (replaces teaser video) -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/teaser.png" alt="MBTI Teaser" loading="lazy" style="width:100%; border-radius:12px;">
+        <h2 class="subtitle has-text-centered" style="margin-top:12px;">
+          MBTI promotes cross-class separation to preserve fine-grained details.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser image -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              MBTI is a plug-and-play enhancement for diffusion personalization that improves fine-grained concept learning.
+              It promotes cross-class separation in the text-embedding space to preserve class-specific details and improve
+              downstream few-shot performance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Image carousel (kept as-is; you can remove if not needed) -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <img src="static/images/carousel1.jpg" alt="Result 1" loading="lazy"/>
+            <h2 class="subtitle has-text-centered">Result 1.</h2>
+          </div>
+          <div class="item">
+            <img src="static/images/carousel2.jpg" alt="Result 2" loading="lazy"/>
+            <h2 class="subtitle has-text-centered">Result 2.</h2>
+          </div>
+          <div class="item">
+            <img src="static/images/carousel3.jpg" alt="Result 3" loading="lazy"/>
+            <h2 class="subtitle has-text-centered">Result 3.</h2>
+          </div>
+          <div class="item">
+            <img src="static/images/carousel4.jpg" alt="Result 4" loading="lazy"/>
+            <h2 class="subtitle has-text-centered">Result 4.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End image carousel -->
+
+  <!-- Youtube video (kept; remove if not needed) -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Video Presentation</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0"
+                      allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End youtube video -->
+
+  <!-- Experimental Results Table (replaces "Another Carousel" video carousel) -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Quantitative Results</h2>
+
+        <!-- Put your result table image here -->
+        <img src="static/images/results_table.png" alt="Quantitative Results Table" loading="lazy"
+             style="width:100%; border-radius:12px;">
+
+        <p class="has-text-centered" style="margin-top:10px;">
+          Red = best, Blue = second-best.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- End Experimental Results Table -->
+
+  <!-- Paper poster -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Poster</h2>
+        <iframe src="static/pdfs/poster.pdf" width="100%" height="550"></iframe>
+      </div>
+    </div>
+  </section>
+  <!--End paper poster -->
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@inproceedings{mbti2026,
+  title={MBTI: Metric-Based Textual Inversion for Fine-Grained Image Classification},
+  author={Chae, Byungkwan and Choi, Youngjae and Kim, Heewon},
+  booktitle={WACV},
+  year={2026},
+  url={https://theplace75.github.io/MBTI/}
+}</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the
+              <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">
+                Academic Project Page Template
+              </a>
+              adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </main>
 </body>
 </html>
