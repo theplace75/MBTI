@@ -159,9 +159,7 @@
                 <span class="link-block">
                   <a href="static/pdfs/paper.pdf" target="_blank"
                      class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
                     <span>Paper</span>
                   </a>
                 </span>
@@ -170,20 +168,16 @@
                 <span class="link-block">
                   <a href="https://github.com/theplace75/MBTI" target="_blank"
                      class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
+                    <span class="icon"><i class="fab fa-github"></i></span>
                     <span>Code</span>
                   </a>
                 </span>
 
-                <!-- Poster (optional) -->
+                <!-- Poster -->
                 <span class="link-block">
                   <a href="static/pdfs/poster.pdf" target="_blank"
                      class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-image"></i>
-                    </span>
+                    <span class="icon"><i class="fas fa-image"></i></span>
                     <span>Poster</span>
                   </a>
                 </span>
@@ -197,18 +191,18 @@
     </div>
   </section>
 
-  <!-- Teaser image (replaces teaser video) -->
+  <!-- Teaser: PDF -->
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <img src="static/images/teaser.png" alt="MBTI Teaser" loading="lazy" style="width:100%; border-radius:12px;">
+        <iframe src="static/pdfs/teaser.pdf" width="100%" height="520" style="border:0; border-radius:12px;" loading="lazy"></iframe>
         <h2 class="subtitle has-text-centered" style="margin-top:12px;">
-          MBTI promotes cross-class separation to preserve fine-grained details.
+          Teaser.
         </h2>
       </div>
     </div>
   </section>
-  <!-- End teaser image -->
+  <!-- End Teaser -->
 
   <!-- Paper abstract -->
   <section class="section hero is-light">
@@ -229,58 +223,61 @@
   </section>
   <!-- End paper abstract -->
 
-  <!-- Image carousel (optional: keep or edit) -->
+  <!-- Pipeline / Method (PDF) -->
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <img src="static/images/carousel1.jpg" alt="Result 1" loading="lazy"/>
-            <h2 class="subtitle has-text-centered">Result 1.</h2>
-          </div>
-          <div class="item">
-            <img src="static/images/carousel2.jpg" alt="Result 2" loading="lazy"/>
-            <h2 class="subtitle has-text-centered">Result 2.</h2>
-          </div>
-          <div class="item">
-            <img src="static/images/carousel3.jpg" alt="Result 3" loading="lazy"/>
-            <h2 class="subtitle has-text-centered">Result 3.</h2>
-          </div>
-          <div class="item">
-            <img src="static/images/carousel4.jpg" alt="Result 4" loading="lazy"/>
-            <h2 class="subtitle has-text-centered">Result 4.</h2>
-          </div>
-        </div>
+        <h2 class="title is-3">Method (Pipeline)</h2>
+        <iframe src="static/pdfs/pipeline.pdf" width="100%" height="650" style="border:0; border-radius:12px;" loading="lazy"></iframe>
       </div>
     </div>
   </section>
-  <!-- End image carousel -->
+  <!-- End Pipeline -->
 
-  <!-- Youtube video (optional: remove if not needed) -->
-  <section class="hero is-small is-light">
+  <!-- Results Carousel: PDFs result1~result5 -->
+  <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
-        <h2 class="title is-3">Video Presentation</h2>
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <div class="publication-video">
-              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
+        <h2 class="title is-3">Qualitative Results</h2>
+
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <iframe src="static/pdfs/result1.pdf" width="100%" height="520" style="border:0; border-radius:12px;" loading="lazy"></iframe>
+            <h2 class="subtitle has-text-centered">Result 1.</h2>
+          </div>
+
+          <div class="item">
+            <iframe src="static/pdfs/result2.pdf" width="100%" height="520" style="border:0; border-radius:12px;" loading="lazy"></iframe>
+            <h2 class="subtitle has-text-centered">Result 2.</h2>
+          </div>
+
+          <div class="item">
+            <iframe src="static/pdfs/result3.pdf" width="100%" height="520" style="border:0; border-radius:12px;" loading="lazy"></iframe>
+            <h2 class="subtitle has-text-centered">Result 3.</h2>
+          </div>
+
+          <div class="item">
+            <iframe src="static/pdfs/result4.pdf" width="100%" height="520" style="border:0; border-radius:12px;" loading="lazy"></iframe>
+            <h2 class="subtitle has-text-centered">Result 4.</h2>
+          </div>
+
+          <div class="item">
+            <iframe src="static/pdfs/result5.pdf" width="100%" height="520" style="border:0; border-radius:12px;" loading="lazy"></iframe>
+            <h2 class="subtitle has-text-centered">Result 5.</h2>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- End youtube video -->
+  <!-- End Results Carousel -->
 
-  <!-- Experimental Results Table (replaces "Another Carousel") -->
+  <!-- Quantitative Results Table (JPG) -->
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
         <h2 class="title is-3">Quantitative Results</h2>
 
-        <!-- Put your result table image here -->
-        <img src="static/images/results_table.png" alt="Quantitative Results Table" loading="lazy"
+        <img src="static/images/table.jpg" alt="Quantitative Results Table" loading="lazy"
              style="width:100%; border-radius:12px;">
 
         <p class="has-text-centered" style="margin-top:10px;">
@@ -289,14 +286,14 @@
       </div>
     </div>
   </section>
-  <!-- End Experimental Results Table -->
+  <!-- End Quantitative Results Table -->
 
   <!-- Paper poster -->
   <section class="hero is-small is-light">
     <div class="hero-body">
       <div class="container">
         <h2 class="title">Poster</h2>
-        <iframe src="static/pdfs/poster.pdf" width="100%" height="550"></iframe>
+        <iframe src="static/pdfs/poster.pdf" width="100%" height="550" style="border:0;"></iframe>
       </div>
     </div>
   </section>
