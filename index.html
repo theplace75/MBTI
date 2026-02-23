@@ -3,262 +3,99 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MBTI | Project Page</title>
 
-  <!-- Primary Meta Tags -->
-  <title>MBTI: Metric-Based Textual Inversion for Fine-Grained Image Classification | Project Page</title>
-  <meta name="title" content="MBTI: Metric-Based Textual Inversion for Fine-Grained Image Classification" />
-  <meta name="description" content="MBTI is a plug-and-play objective that enlarges inter-class margins in the text-embedding space for fine-grained diffusion personalization, improving generation and few-shot classification." />
-  <meta name="keywords" content="diffusion models, textual inversion, personalization, fine-grained classification, few-shot learning, metric learning, text embeddings, latent diffusion, data augmentation, MBTI" />
-  <meta name="author" content="Byungkwan Chae" />
-  <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:site_name" content="Graduate School of Soongsil University" />
-  <meta property="og:title" content="MBTI: Metric-Based Textual Inversion for Fine-Grained Image Classification" />
-  <meta property="og:description" content="MBTI is a plug-and-play objective that enlarges inter-class margins in the text-embedding space for fine-grained diffusion personalization, improving generation and few-shot classification." />
-  <meta property="og:url" content="https://theplace75.github.io/MBTI/" />
-  <meta property="og:image" content="https://theplace75.github.io/MBTI/static/images/social_preview.png" />
-
-  <!-- Twitter (optional) -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="MBTI: Metric-Based Textual Inversion for Fine-Grained Image Classification" />
-  <meta name="twitter:description" content="MBTI is a plug-and-play objective that enlarges inter-class margins in the text-embedding space for fine-grained diffusion personalization, improving generation and few-shot classification." />
-  <meta name="twitter:image" content="https://theplace75.github.io/MBTI/static/images/social_preview.png" />
-
-  <!-- Citation -->
-  <meta name="citation_title" content="MBTI: Metric-Based Textual Inversion for Fine-Grained Image Classification" />
-  <meta name="citation_author" content="Chae, Byungkwan" />
-  <meta name="citation_publication_date" content="2025" />
-  <meta name="citation_conference_title" content="Master's Thesis, Graduate School of Soongsil University" />
-  <meta name="citation_pdf_url" content="https://theplace75.github.io/MBTI/static/pdfs/paper.pdf" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" />
-  <link rel="apple-touch-icon" href="static/images/favicon.ico" />
-
-  <!-- CSS (Template) -->
+  <!-- Use template CSS if present -->
   <link rel="stylesheet" href="static/css/bulma.min.css" />
   <link rel="stylesheet" href="static/css/index.css" />
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
-  </noscript>
-
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-
-  <!-- JS (Template) -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/index.js"></script>
 </head>
 
 <body>
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
+<main id="main-content">
 
-  <main id="main-content">
+  <!-- Header -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop has-text-centered">
+        <h1 class="title is-1">MBTI</h1>
+        <p class="subtitle is-4">Plug-and-play cross-class separation for fine-grained diffusion personalization</p>
 
-    <!-- ================= HERO ================= -->
-    <section class="hero">
-      <div class="hero-body">
-        <div class="container is-max-desktop">
-          <div class="columns is-centered">
-            <div class="column has-text-centered">
+        <div class="is-size-5">
+          <span>Youngjae Choi<sup>*</sup>,</span>
+          <span>Heewon Kim<sup>†</sup></span>
+        </div>
+        <div class="is-size-6" style="margin-top: 6px;">
+          <span><sup>*</sup>First author</span> · <span><sup>†</sup>Corresponding author</span>
+        </div>
 
-              <h1 class="title is-1 publication-title">
-                MBTI: Metric-Based Textual Inversion<br />
-                for Fine-Grained Image Classification
-              </h1>
-
-              <div class="is-size-5 publication-authors">
-                <span class="author-block">
-                  <a href="https://github.com/theplace75" target="_blank">Byungkwan Chae</a>
-                </span>
-              </div>
-
-              <div class="is-size-5 publication-authors">
-                <span class="author-block">
-                  Department of Digital Media<br />
-                  Graduate School of Soongsil University<br />
-                  October 2025
-                </span>
-              </div>
-
-              <div class="column has-text-centered">
-                <div class="publication-links">
-
-                  <!-- Paper PDF -->
-                  <span class="link-block">
-                    <a href="static/pdfs/paper.pdf" target="_blank"
-                       class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                      <span>Paper</span>
-                    </a>
-                  </span>
-
-                  <!-- Code -->
-                  <span class="link-block">
-                    <a href="https://github.com/theplace75/MBTI" target="_blank"
-                       class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon"><i class="fab fa-github"></i></span>
-                      <span>Code</span>
-                    </a>
-                  </span>
-
-                </div>
-              </div>
-
-              <p class="is-size-6" style="margin-top: 10px;">
-                MBTI promotes cross-class separation of class embeddings in the text-embedding space to preserve fine-grained details.
-              </p>
-
-            </div>
-          </div>
+        <!-- Optional teaser image -->
+        <div style="margin-top: 18px;">
+          <img src="static/images/teaser.png" alt="Teaser" style="width: 100%; max-width: 980px; border-radius: 12px;" />
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ================= TEASER ================= -->
-    <section class="hero teaser">
-      <div class="container is-max-desktop">
-        <div class="hero-body">
-          <img src="static/images/teaser.png" alt="MBTI teaser" loading="lazy" style="width:100%; border-radius:12px;" />
-          <h2 class="subtitle has-text-centered" style="margin-top: 12px;">
-            Plug-and-play margin enlargement improves fine-grained generation and few-shot classification.
-          </h2>
-        </div>
+  <!-- Abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Abstract</h2>
+      <div class="content">
+        <p>
+          MBTI is a plug-and-play enhancement for diffusion personalization that improves fine-grained concept learning.
+          It promotes cross-class separation in the text-embedding space to preserve class-specific details and improve
+          downstream few-shot performance.
+        </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ================= ABSTRACT ================= -->
-    <section class="section hero is-light">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Abstract</h2>
-            <div class="content has-text-justified">
-              <p>
-                Personalizing text-to-image diffusion models from only a few images per class remains challenging,
-                especially for fine-grained categories where class-defining cues are subtle. We introduce Metric-Based
-                Textual Inversion (MBTI), a plug-and-play objective that augments textual inversion by explicitly enlarging
-                inter-class margins in the text-embedding space while preserving denoising fidelity. MBTI (i) selects the
-                most confusable previously learned classes as support embeddings via cosine similarity (SES), (ii) contrasts
-                predicted noises under the same diffusion state (timestep and noise) between the supports and the current
-                token (DMM), and (iii) stabilizes training with a time-weighted regularizer aligned to the diffusion objective.
-                Across Flowers102, NABirds, FGVC-Aircraft, Stanford Cars, COCO, and PASCAL VOC, MBTI produces more
-                representative samples and improves few-shot classification under augmentation-for-classification. MBTI
-                requires no model fine-tuning and integrates seamlessly with existing personalization pipelines.
-              </p>
-            </div>
-          </div>
-        </div>
+  <!-- Method -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Method</h2>
+      <div class="content">
+        <ul>
+          <li><b>SES:</b> selects Top-K most confusing neighbor class embeddings.</li>
+          <li><b>DMM:</b> measures diffusion-based distance via predicted-noise differences under the same <i>z<sub>t</sub></i>.</li>
+          <li><b>Objective:</b> balances separation with denoising fidelity using time-adaptive regularization.</li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ================= METHOD ================= -->
-    <section class="section">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Method</h2>
-
-        <div class="content">
-          <figure>
-            <img src="static/images/fig41_method.png" alt="MBTI Overview (Fig. 4.1)" loading="lazy" style="width:100%; border-radius:12px;" />
-            <figcaption class="has-text-centered">
-              MBTI overview (SES + DMM + training objective).
-            </figcaption>
-          </figure>
-
-          <div class="columns is-variable is-6" style="margin-top: 20px;">
-            <div class="column">
-              <h3 class="title is-5">(a) Support Embedding Selection (SES)</h3>
-              <p>Select Top-K nearest prior class embeddings as supports.</p>
-              <img src="static/images/eq_ses.png" alt="SES equation" loading="lazy" style="max-width:100%; height:auto;" />
-            </div>
-
-            <div class="column">
-              <h3 class="title is-5">(b) Distance Metric Module (DMM)</h3>
-              <p>Measure cross-class distance via predicted-noise differences under the same diffusion state.</p>
-              <img src="static/images/eq_dmm.png" alt="DMM equation" loading="lazy" style="max-width:100%; height:auto;" />
-            </div>
-
-            <div class="column">
-              <h3 class="title is-5">Training Objective</h3>
-              <p>Balance separation and denoising fidelity with a time-weighted regularizer.</p>
-              <img src="static/images/eq_obj.png" alt="Objective equation" loading="lazy" style="max-width:100%; height:auto;" />
-            </div>
-          </div>
-        </div>
+  <!-- Qualitative Results -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
+      <div class="content">
+        <p>
+          MBTI preserves fine-grained details where baselines and SoTA methods often blur or distort them.
+        </p>
+        <!-- Optional figures -->
+        <img src="static/images/fig51.png" alt="Qualitative comparison" style="width: 100%; border-radius: 12px; margin-top: 10px;" />
+        <img src="static/images/fig52.png" alt="SoTA comparison" style="width: 100%; border-radius: 12px; margin-top: 10px;" />
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ================= RESULTS ================= -->
-    <section class="section hero is-light">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Results</h2>
-
-        <div class="content">
-          <h3 class="title is-5">Qualitative Comparison (Fig. 5.1)</h3>
-          <p>MBTI preserves class-defining fine-grained details where baselines often fail.</p>
-          <figure>
-            <img src="static/images/fig51.png" alt="Qualitative comparison (Fig 5.1)" loading="lazy" style="width:100%; border-radius:12px;" />
-          </figure>
-
-          <h3 class="title is-5" style="margin-top: 28px;">SoTA Comparison (Fig. 5.2)</h3>
-          <p>Compared to SoTA personalization methods, MBTI better preserves fine-grained details.</p>
-          <figure>
-            <img src="static/images/fig52.png" alt="SoTA comparison (Fig 5.2)" loading="lazy" style="width:100%; border-radius:12px;" />
-          </figure>
-
-          <h3 class="title is-5" style="margin-top: 28px;">Few-shot Classification (Table 5.2)</h3>
-          <p>MBTI improves Macro-ACC across fine-grained datasets.</p>
-          <figure>
-            <img src="static/images/table52.png" alt="Table 5.2" loading="lazy" style="width:100%; border-radius:12px;" />
-            <figcaption class="has-text-centered">Red = best, Blue = second-best.</figcaption>
-          </figure>
-
-          <h3 class="title is-5" style="margin-top: 28px;">FID / CLIP (Table 5.4)</h3>
-          <p>MBTI acts as a plug-and-play enhancement and improves FID/CLIP when added to LoRA / DreamBooth+LoRA.</p>
-          <figure>
-            <img src="static/images/table54.png" alt="Table 5.4" loading="lazy" style="width:100%; border-radius:12px;" />
-            <figcaption class="has-text-centered">Red = best, Blue = second-best.</figcaption>
-          </figure>
-        </div>
+  <!-- Quantitative Results -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Quantitative Results</h2>
+      <div class="content">
+        <p>
+          MBTI improves few-shot Macro-ACC on fine-grained datasets and provides plug-and-play gains when added to LoRA
+          and DreamBooth+LoRA.
+        </p>
+        <!-- Optional tables -->
+        <img src="static/images/table52.png" alt="Few-shot classification table" style="width: 100%; border-radius: 12px; margin-top: 10px;" />
+        <img src="static/images/table54.png" alt="FID/CLIP table" style="width: 100%; border-radius: 12px; margin-top: 10px;" />
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ================= PDF VIEWER ================= -->
-    <section class="hero is-small">
-      <div class="hero-body">
-        <div class="container is-max-desktop">
-          <h2 class="title is-3 has-text-centered">PDF</h2>
-          <iframe src="static/pdfs/paper.pdf" width="100%" height="650" style="border:1px solid #ddd; border-radius:10px;"></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= FOOTER ================= -->
-    <footer class="footer">
-      <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-8">
-            <div class="content">
-              <p>
-                This page was built using the
-                <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>,
-                adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-  </main>
+</main>
 </body>
 </html>
