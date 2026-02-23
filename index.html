@@ -1,101 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MBTI | Project Page</title>
-
-  <!-- Use template CSS if present -->
-  <link rel="stylesheet" href="static/css/bulma.min.css" />
-  <link rel="stylesheet" href="static/css/index.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MBTI</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif; margin:40px; line-height:1.5;}
+    h1{margin:0 0 6px 0;}
+    .authors{margin:0 0 18px 0; font-size:16px;}
+    h2{margin:22px 0 6px 0; font-size:18px;}
+    p{margin:0;}
+  </style>
 </head>
-
 <body>
-<main id="main-content">
+  <h1>MBTI</h1>
+  <div class="authors">Youngjae Choi*, Heewon Kim†</div>
 
-  <!-- Header -->
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop has-text-centered">
-        <h1 class="title is-1">MBTI</h1>
-        <p class="subtitle is-4">Plug-and-play cross-class separation for fine-grained diffusion personalization</p>
+  <h2>Abstract</h2>
+  <p>MBTI improves fine-grained diffusion personalization by promoting cross-class separation in the text-embedding space.</p>
 
-        <div class="is-size-5">
-          <span>Youngjae Choi<sup>*</sup>,</span>
-          <span>Heewon Kim<sup>†</sup></span>
-        </div>
-        <div class="is-size-6" style="margin-top: 6px;">
-          <span><sup>*</sup>First author</span> · <span><sup>†</sup>Corresponding author</span>
-        </div>
+  <h2>Method</h2>
+  <p>SES selects confusing neighbors; DMM maximizes diffusion-based distance; objective balances separation and fidelity.</p>
 
-        <!-- Optional teaser image -->
-        <div style="margin-top: 18px;">
-          <img src="static/images/teaser.png" alt="Teaser" style="width: 100%; max-width: 980px; border-radius: 12px;" />
-        </div>
-      </div>
-    </div>
-  </section>
+  <h2>Qualitative Results</h2>
+  <p>MBTI preserves fine-grained details where baselines/SoTA methods often blur or distort them.</p>
 
-  <!-- Abstract -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Abstract</h2>
-      <div class="content">
-        <p>
-          MBTI is a plug-and-play enhancement for diffusion personalization that improves fine-grained concept learning.
-          It promotes cross-class separation in the text-embedding space to preserve class-specific details and improve
-          downstream few-shot performance.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Method -->
-  <section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Method</h2>
-      <div class="content">
-        <ul>
-          <li><b>SES:</b> selects Top-K most confusing neighbor class embeddings.</li>
-          <li><b>DMM:</b> measures diffusion-based distance via predicted-noise differences under the same <i>z<sub>t</sub></i>.</li>
-          <li><b>Objective:</b> balances separation with denoising fidelity using time-adaptive regularization.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Qualitative Results -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
-      <div class="content">
-        <p>
-          MBTI preserves fine-grained details where baselines and SoTA methods often blur or distort them.
-        </p>
-        <!-- Optional figures -->
-        <img src="static/images/fig51.png" alt="Qualitative comparison" style="width: 100%; border-radius: 12px; margin-top: 10px;" />
-        <img src="static/images/fig52.png" alt="SoTA comparison" style="width: 100%; border-radius: 12px; margin-top: 10px;" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Quantitative Results -->
-  <section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Quantitative Results</h2>
-      <div class="content">
-        <p>
-          MBTI improves few-shot Macro-ACC on fine-grained datasets and provides plug-and-play gains when added to LoRA
-          and DreamBooth+LoRA.
-        </p>
-        <!-- Optional tables -->
-        <img src="static/images/table52.png" alt="Few-shot classification table" style="width: 100%; border-radius: 12px; margin-top: 10px;" />
-        <img src="static/images/table54.png" alt="FID/CLIP table" style="width: 100%; border-radius: 12px; margin-top: 10px;" />
-      </div>
-    </div>
-  </section>
-
-</main>
+  <h2>Quantitative Results</h2>
+  <p>MBTI boosts few-shot Macro-ACC and improves FID/CLIP as a plug-and-play add-on to LoRA and DreamBooth+LoRA.</p>
 </body>
 </html>
