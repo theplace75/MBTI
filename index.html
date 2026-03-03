@@ -1,4 +1,69 @@
-<section class="hero teaser">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MBTI | WACV 2026</title>
+
+  <meta name="title" content="MBTI: Metric-Based Textual Inversion for Fine-Grained Image Classification">
+  <meta name="description" content="MBTI is a plug-and-play enhancement for diffusion personalization.">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+</head>
+
+<body>
+  <main id="main-content">
+    
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                MBTI: Metric-Based Textual Inversion<br>
+                for Fine-Grained Image Classification
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><b>Byungkwan Chae</b>,</span>
+                <span class="author-block">Youngjae Choi<sup>*</sup>,</span>
+                <span class="author-block">Heewon Kim<sup>†</sup></span>
+              </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Soongsil University, Seoul, Republic of Korea<br><b>WACV 2026</b></span>
+              </div>
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a href="static/pdfs/WACV_MBTI.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="https://github.com/theplace75/MBTI" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fab fa-github"></i></span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body">
           <img src="static/pdfs/teaser.jpg" alt="Teaser" style="width:100%; border-radius:12px;">
@@ -9,14 +74,16 @@
       </div>
     </section>
 
-    <section class="hero is-small">
-      <div class="hero-body">
-        <div class="container">
-          <h2 class="title is-3">Method (Pipeline)</h2>
-          <div class="columns is-centered">
-            <div class="column is-full">
-              <img src="static/pdfs/framework.jpg" alt="Framework" style="width:100%; border-radius:12px; margin-bottom:20px;">
-              <img src="static/pdfs/Pipeline.jpg" alt="Pipeline" style="width:100%; border-radius:12px;">
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                MBTI is a plug-and-play enhancement for diffusion personalization that improves fine-grained concept learning.
+                It promotes cross-class separation in the text-embedding space to preserve class-specific details.
+              </p>
             </div>
           </div>
         </div>
@@ -25,25 +92,71 @@
 
     <section class="hero is-small">
       <div class="hero-body">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3">Method (Pipeline)</h2>
+          <div class="content has-text-centered">
+            <img src="static/pdfs/framework.jpg" alt="Framework" style="width:100%; border-radius:12px; margin-bottom:20px;">
+            <img src="static/pdfs/Pipeline.jpg" alt="Pipeline" style="width:100%; border-radius:12px;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-small is-light">
+      <div class="hero-body">
         <div class="container">
           <h2 class="title is-3">Qualitative Results</h2>
           <div id="results-carousel" class="carousel results-carousel">
-            <div class="item">
-              <img src="static/pdfs/result1.jpg" alt="Result 1" style="width:100%; border-radius:12px;">
+            <div class="item item-result1">
+              <img src="static/pdfs/result1.jpg" alt="Result 1" style="width:100%; height:auto;">
             </div>
-            <div class="item">
-              <img src="static/pdfs/result2.jpg" alt="Result 2" style="width:100%; border-radius:12px;">
+            <div class="item item-result2">
+              <img src="static/pdfs/result2.jpg" alt="Result 2" style="width:100%; height:auto;">
             </div>
-            <div class="item">
-              <img src="static/pdfs/result3.jpg" alt="Result 3" style="width:100%; border-radius:12px;">
+            <div class="item item-result3">
+              <img src="static/pdfs/result3.jpg" alt="Result 3" style="width:100%; height:auto;">
             </div>
-            <div class="item">
-              <img src="static/pdfs/result4.jpg" alt="Result 4" style="width:100%; border-radius:12px;">
+            <div class="item item-result4">
+              <img src="static/pdfs/result4.jpg" alt="Result 4" style="width:100%; height:auto;">
             </div>
-            <div class="item">
-              <img src="static/pdfs/result5.jpg" alt="Result 5" style="width:100%; border-radius:12px;">
+            <div class="item item-result5">
+              <img src="static/pdfs/result5.jpg" alt="Result 5" style="width:100%; height:auto;">
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3">Quantitative Results</h2>
+          <div class="content has-text-centered">
+            <img src="static/pdfs/table.jpg" alt="Results Table" style="width:100%; border-radius:12px;">
+            <p style="margin-top:10px;">Red = best, Blue = second-best.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@inproceedings{mbti2026,
+  title={MBTI: Metric-Based Textual Inversion for Fine-Grained Image Classification},
+  author={Chae, Byungkwan and Choi, Youngjae and Kim, Heewon},
+  booktitle={WACV},
+  year={2026},
+  url={https://theplace75.github.io/MBTI/}
+}</code></pre>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container has-text-centered">
+        <p>This page was built using the Academic Project Page Template.</p>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
