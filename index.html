@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MBTI | WACV 2026</title>
 
+  <meta name="title" content="MBTI: Metric-Based Textual Inversion for Fine-Grained Image Classification">
+  <meta name="description" content="MBTI is a plug-and-play enhancement for diffusion personalization that improves fine-grained concept learning.">
+
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
@@ -66,7 +69,7 @@
         <div class="hero-body">
           <img src="static/pdfs/teaser.jpg" alt="Teaser" style="width:100%; border-radius:12px;">
           <h2 class="subtitle has-text-centered" style="margin-top:12px;">
-            MBTI preserves fine-grained details by promoting cross-class separation in text embeddings.
+            MBTI promotes cross-class separation in the text-embedding space to preserve fine-grained details.
           </h2>
         </div>
       </div>
@@ -79,8 +82,7 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                MBTI is a plug-and-play enhancement for diffusion personalization that improves fine-grained concept learning.
-                It promotes cross-class separation in the text-embedding space to preserve class-specific details.
+                Personalizing text-to-image diffusion models from only a few images per class remains challenging, especially for fine-grained categories where class-defining cues are subtle. We introduce <strong>Metric-Based Textual Inversion (MBTI)</strong>, a plug-and-play objective that augments textual inversion by explicitly enlarging inter-class margins in the text-embedding space while preserving denoising fidelity. MBTI (i) selects the most confusable previously learned classes as support embeddings via cosine similarity (SES), (ii) contrasts predicted noises under the same diffusion state (timestep and noise) between the supports and the current token (DMM), and (iii) stabilizes training with a time-weighted regularizer aligned to the diffusion objective. Across Flowers102, NABirds, FGVC-Aircraft, Stanford Cars, COCO, and PASCAL VOC, MBTI produces more representative samples and improves few-shot classification under augmentation-for-classification. MBTI requires no model fine-tuning and integrates seamlessly with existing personalization pipelines.
               </p>
             </div>
           </div>
@@ -136,7 +138,7 @@
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
-        <pre><code>@inproceedings{mbti2026,
+        <pre style="background-color: #f5f5f5; padding: 20px; border-radius: 8px;"><code>@inproceedings{mbti2026,
   title={MBTI: Metric-Based Textual Inversion for Fine-Grained Image Classification},
   author={Chae, Byungkwan and Choi, Youngjae and Kim, Heewon},
   booktitle={WACV},
