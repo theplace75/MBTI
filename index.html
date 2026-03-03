@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MBTI | WACV 2026</title>
 
-  <meta name="title" content="MBTI: Metric-Based Textual Inversion for Fine-Grained Image Classification">
-  <meta name="description" content="MBTI is a plug-and-play enhancement for diffusion personalization that improves fine-grained concept learning.">
-
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
@@ -64,17 +61,6 @@
       </div>
     </section>
 
-    <section class="hero teaser">
-      <div class="container is-max-desktop">
-        <div class="hero-body">
-          <img src="static/pdfs/teaser.jpg" alt="Teaser" style="width:100%; border-radius:12px;">
-          <h2 class="subtitle has-text-centered" style="margin-top:12px;">
-            MBTI promotes cross-class separation in the text-embedding space to preserve fine-grained details.
-          </h2>
-        </div>
-      </div>
-    </section>
-
     <section class="section hero is-light">
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
@@ -95,7 +81,10 @@
         <div class="container is-max-desktop">
           <h2 class="title is-3">Method (Framework)</h2>
           <div class="content has-text-centered">
-            <img src="static/pdfs/framework.jpg" alt="Framework" style="width:100%; border-radius:12px;">
+            <img src="static/pdfs/framework.jpg" alt="Framework" style="width:100%; border-radius:12px; margin-bottom:20px;">
+            <p class="has-text-justified">
+              <strong>Plug-and-play Personalization:</strong> MBTI operates as an add-on objective for existing textual inversion pipelines. By enlarging inter-class margins in the embedding space without fine-tuning the UNet, it preserves the pre-trained model's generative power while capturing class-specific fine-grained details.
+            </p>
           </div>
         </div>
       </div>
@@ -106,18 +95,11 @@
         <div class="container">
           <h2 class="title is-3">Qualitative Results</h2>
           <div id="results-carousel" class="carousel results-carousel">
-            <div class="item">
-              <img src="static/pdfs/result1.jpg" alt="Result 1" style="width:100%; height:auto;">
-            </div>
-            <div class="item">
-              <img src="static/pdfs/result3.jpg" alt="Result 2" style="width:100%; height:auto;">
-            </div>
-            <div class="item">
-              <img src="static/pdfs/result4.jpg" alt="Result 3" style="width:100%; height:auto;">
-            </div>
-            <div class="item">
-              <img src="static/pdfs/result2.jpg" alt="Result 4" style="width:100%; height:auto;">
-            </div>
+            <div class="item"><img src="static/pdfs/result1.jpg" alt="Result 1"></div>
+            <div class="item"><img src="static/pdfs/result2.jpg" alt="Result 2"></div>
+            <div class="item"><img src="static/pdfs/result3.jpg" alt="Result 3"></div>
+            <div class="item"><img src="static/pdfs/result4.jpg" alt="Result 4"></div>
+            <div class="item"><img src="static/pdfs/result5.jpg" alt="Result 5"></div>
           </div>
         </div>
       </div>
@@ -127,10 +109,21 @@
       <div class="hero-body">
         <div class="container is-max-desktop">
           <h2 class="title is-3">Quantitative Results</h2>
-          <div class="content has-text-centered">
-            <img src="static/pdfs/table.jpg" alt="Results Table" style="width:50%; border-radius:12px; margin: 0 auto;">
-            <p style="margin-top:10px;">Red = best, Blue = second-best.</p>
+          
+          <div class="content has-text-centered" style="margin-bottom: 40px;">
+            <img src="static/pdfs/table.jpg" alt="Table 1" style="width:55%; border-radius:12px; margin-bottom: 10px;">
+            <p style="font-size: 0.95rem;">
+              <strong>Comparison of few-shot performance.</strong> Best and second-best scores are in <span style="color:red;">red</span> and <span style="color:blue;">blue</span>. <strong>Difference</strong> indicates the margin between MBTI and the highest-performing baseline.
+            </p>
           </div>
+
+          <div class="content has-text-centered">
+            <img src="static/pdfs/table2.jpg" alt="Table 2" style="width:55%; border-radius:12px; margin-bottom: 10px;">
+            <p style="font-size: 0.95rem;">
+              <strong>Average FID and CLIP scores.</strong> Lower FID indicates better distribution alignment, while higher CLIP reflects stronger text–image consistency. Best results are highlighted in <span style="color:red;">red</span>.
+            </p>
+          </div>
+
         </div>
       </div>
     </section>
@@ -138,9 +131,9 @@
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
-        <pre style="background-color: #f5f5f5; padding: 20px; border-radius: 8px;"><code>@inproceedings{mbti2026,
+        <pre><code>@inproceedings{mbti2026,
   title={MBTI: Metric-Based Textual Inversion for Fine-Grained Image Classification},
-  author={Chae, Byungkwan and Choi, Youngjae and Kim, Heewon},
+  author={Chae, Byungkwan and Choi, Youngjae Choi, Youngjae and Kim, Heewon},
   booktitle={WACV},
   year={2026},
   url={https://theplace75.github.io/MBTI/}
